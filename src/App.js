@@ -17,11 +17,11 @@ function App() {
         <button onClick={handleButtonClicked}>Greetings!</button>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/veiserath/Daftcode-frontend"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Link to GitHub repo
         </a>
       </header>
     </div>
