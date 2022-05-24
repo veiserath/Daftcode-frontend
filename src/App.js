@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Login from './login';
 
 function App() {
-
   const handleButtonClicked = () => {
     alert('Hello from React!')
   }
+
+
 
   return (
     <div className="App">
@@ -16,10 +18,11 @@ function App() {
           className="App-link"
           href="https://github.com/veiserath/Daftcode-frontend"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Link to GitHub repo
         </a>
+        
+        <Login onChange={handleButtonClicked}></Login>
       </header>
     </div>
   );
