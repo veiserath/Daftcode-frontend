@@ -9,14 +9,14 @@ import {
 } from './NavbarElements';
 import logo from './logo.svg'
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
         <NavLink to='/'>
           <img src={logo} alt='logo' />
         </NavLink>
-        <Bars />
+        <Bars onClick={toggle} />
         <NavMenu>
           <NavLink to='/about' activeStyle>
             About

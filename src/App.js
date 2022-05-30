@@ -2,16 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 import Login from './login';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Home from './pages/index'
-import About from './pages/about';
+import Home from './pages/home'
 import Navbar from './navbar';
 import ContactUs from './pages/contactus';
 import SignUp from './pages/signup';
+import Sidebar from './sidebar';
+import {useState} from 'react';
+import AboutUsSection from './AboutUsSection/index';
 
 function App() {
   const handleButtonClicked = () => {
     alert('Hello from React!')
   }
+
+  const [isOpen, setIsOpen] = useState(false)
+    
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    }
 
   const LoginPage = () => {
 
@@ -41,11 +49,11 @@ function App() {
     <BrowserRouter>
       {/* <Route index path='/' element={<LoginPage />} />
         <Route path='/about' element={<AboutPage />} /> */}
-
-      <Navbar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle}/>
         <Routes>
           <Route path='/' exact element={<Home />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<AboutUsSection />} />
           <Route path='/signin' element={<LoginPage />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/sign-up' element={<SignUp />} />
