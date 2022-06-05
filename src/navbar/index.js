@@ -1,37 +1,37 @@
 import React from 'react';
 import {
-  Nav,
-  NavLink,
+  Navigation,
+  NavigationLink,
   Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink
+  NavigationMenu,
+  NavigationButton,
+  NavigationButtonLink
 } from './NavbarElements';
 import logo from './logo.svg'
 
 const Navbar = ({ toggle }) => {
   return (
     <>
-      <Nav>
-        <NavLink to='/'>
+      <Navigation>
+        <NavigationLink to='/'>
           <img src={logo} alt='logo' />
-        </NavLink>
+        </NavigationLink>
         <Bars onClick={toggle} />
-        <NavMenu>
-          <NavLink to='/about' activeStyle>
+        <NavigationMenu>
+          <NavigationLink to='/about' activeStyle>
             About
-          </NavLink>
-          <NavLink to='/contact-us' activeStyle>
-            Contact Us
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
+          </NavigationLink>
+          <NavigationLink to='/rick-and-morty' activeStyle>
+            Rick and Morty API
+          </NavigationLink>
+          <NavigationLink to='/sign-up' activeStyle>
             Sign Up
-          </NavLink>
-        </NavMenu>
-        <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
-      </Nav>
+          </NavigationLink>
+        </NavigationMenu>
+        <NavigationButton>
+          <NavigationButtonLink to='/signin'>Sign In</NavigationButtonLink>
+        </NavigationButton>
+      </Navigation>
     </>
   );
 };
