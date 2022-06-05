@@ -11,7 +11,6 @@ import LoginPage from './pages/login';
 
 function App() {
   
-
   const [isOpen, setIsOpen] = useState(false)
     
     const toggle = () => {
