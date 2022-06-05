@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from './pages/home'
 import Navbar from './navbar';
-import ContactUs from './pages/contactus';
+import RickAndMorty from './pages/RickAndMorty';
 import SignUp from './pages/signup';
 import Sidebar from './sidebar';
 import {useState} from 'react';
@@ -26,7 +26,7 @@ function App() {
           <Route path='/' exact element={<Home />} />
           <Route path='/about' element={<AboutUsSection />} />
           <Route path='/signin' element={<LoginPage />} />
-          <Route path='/contact-us' element={<ContactUs />} />
+          <Route path='/rick-and-morty' element={<RickAndMorty />} />
           <Route path='/sign-up' element={<SignUp />} />
         </Routes>
     </BrowserRouter>

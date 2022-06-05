@@ -1,7 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from 'styled-components';
+import { Button } from "react-scroll/modules";
 
-export default function ContactUs() {
+
+
+const StyledButton = styled.button`
+  background-color: blue;
+  font-size: 32px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+`;
+
+export default function RickAndMorty() {
   const [data, setData] = useState({ results: [] });
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
@@ -23,20 +37,20 @@ export default function ContactUs() {
 
   return (
     <div className="resultsWrapper">
-      <form onSubmit={handleSubmit}>
+      <br />
+      <form style={{display: 'flex',  justifyContent:'space-around', alignItems:'center'}} onSubmit={handleSubmit} >
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         ></input>
-        <button type="submit">Search</button>
+        <StyledButton type="submit" color="blue">Search</StyledButton>
       </form>
       <div className="results">
         <ul>
           {data.results.map((item) => (
             <li key={item.id}>
               <img alt={item.name} src={item.image} />
-
               <span className="name">{item.name}</span>
             </li>
           ))}
