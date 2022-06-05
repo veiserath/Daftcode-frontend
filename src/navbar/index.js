@@ -22,7 +22,7 @@ const Navbar = ({ toggle }) => {
             About
           </NavigationLink>
           <NavigationLink to='/rick-and-morty' activeStyle>
-            Rick and Morty Search
+            Rick and Morty API
           </NavigationLink>
           <NavigationLink to='/sign-up' activeStyle>
             Sign Up

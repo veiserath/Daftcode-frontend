@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from './pages/home'
 import Navbar from './navbar';
-import RickAndMorty from './pages/RickAndMorty';
+import RickAndMorty from './pages/rickandmorty';
 import SignUp from './pages/signup';
 import Sidebar from './sidebar';
 import {useState} from 'react';
