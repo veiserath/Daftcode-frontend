@@ -13,8 +13,8 @@ const Sidebar = ({isOpen, toggle }) => {
                 <SidebarLink to='/about' onClick={toggle}>
                     About
                 </SidebarLink>
-                <SidebarLink to='/contact-us' onClick={toggle}>
-                    Contact Us
+                <SidebarLink to='/rick-and-morty' onClick={toggle}>
+                    Rick and Morty API
                 </SidebarLink>
                 <SidebarLink to='/sign-up' onClick={toggle}>
                     Sign Up
