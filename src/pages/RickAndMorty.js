@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from 'styled-components';
-import { Button } from "react-scroll/modules";
-
+import { Input, TextField } from "@mui/material";
 
 
 const StyledButton = styled.button`
-  background-color: blue;
-  font-size: 32px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 4px;
+  background: #256ce1;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  /* Second Nav */
+  margin-left: 24px;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #256ce1;
+    color: #010606;
+  }
   
 `;
 
@@ -39,12 +50,14 @@ export default function RickAndMorty() {
     <div className="resultsWrapper">
       <br />
       <form style={{display: 'flex',  justifyContent:'space-around', alignItems:'center'}} onSubmit={handleSubmit} >
-        <input
+        <TextField
           type="text"
           value={query}
+          id='outlined-basic'
+          placeholder='Character Name'
           onChange={(e) => setQuery(e.target.value)}
-        ></input>
-        <StyledButton type="submit" color="blue">Search</StyledButton>
+        ></TextField>
+        <StyledButton type="submit" color="">Search</StyledButton>
       </form>
       <div className="results">
         <ul>
